@@ -15,7 +15,7 @@ class MessageController extends Controller
         Fcm()
             ->to($recipients)
             ->priority('high')
-            ->timeToLive(0)
+            ->timeToLive(10)
             ->data(request()->message)
             ->send();
 
